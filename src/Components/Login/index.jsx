@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Button, FormControl, FormLabel, Input, Text } from '@chakra-ui/react';
 import rocketImage from '../../assets/rocket.png'
 import { Link, useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 
 const Login = () => {
   const [userName, setUserName] = useState('');
@@ -26,7 +26,7 @@ const Login = () => {
       <FormControl id="password" my="6">
         <FormLabel>Login</FormLabel>
         <Input 
-          type="password" 
+          type="text" 
           value={userName} 
           onChange={(e) => setUserName(e.target.value)} 
           placeholder="Digite seu nome" 
